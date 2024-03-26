@@ -1,3 +1,27 @@
+###############################################################################
+#
+#
+# Title: 
+# Flask + Render Deployment + Psycopg2 Lab for CSPB 3308 Spring '24
+# 
+# Author: 
+# Nathan J Harris 
+# 
+# Usage: 
+# go to the routes to see an example of creating a database creating a table, 
+# inserting, selecting, and dropping the table.
+# 
+# github: 
+# nathanjh-28
+#
+# CU ID:
+# naha3153
+# 
+#
+###############################################################################
+
+
+
 import psycopg2
 from flask import Flask
 app = Flask(__name__)
