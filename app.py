@@ -64,4 +64,14 @@ def selecting():
         response_string+=" </tr> "
     response_string += " </table> "
     return response_string
-    
+
+@app.route('/db_drop')
+def dropping():
+    conn = psycopg2.connect('postgres://flaskbballdb_user:D2QJhgX5jMUAZOw883TC9tgUY5ovJJK2@dpg-co1hgf7109ks73bsbtvg-a/flaskbballdb')
+    cur = conn.cursor()
+    cur.execute("""
+        DROP TABLE Basketball;
+    """)
+    conn.commit()
+    conn.close()
+    return "Basketball Table was dropped with Success"
