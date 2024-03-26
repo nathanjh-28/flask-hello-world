@@ -56,14 +56,12 @@ def selecting():
     records = cur.fetchall()
     conn.close()
     response_string = ""
-    response_string += "<table>"
+    response_string += " <table> "
     for player in records:
-        print(player,response_string)
-        response_string+='<tr>'
+        response_string+=' <tr> '
         for info in player:
-            print(response_string,player,info)
-            response_string += "<td>{}</td>".format(info)
-        response_string+="</tr"
-    response_string += "</table>"
+            response_string += " <td> {} </td> ".format(info)
+        response_string+=" </tr> "
+    response_string += " </table> "
     return response_string
     
